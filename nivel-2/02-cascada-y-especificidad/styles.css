@@ -1,0 +1,115 @@
+/* ============================================================
+   FERRETERÍA EL TORNILLO — NIVEL 2, EJERCICIO 2
+   Tema: cascada, especificidad y selectores modernos
+   ============================================================
+   El catálogo de la ferretería se ve mal: los estilos "no
+   agarran" donde deberían y "agarran" donde no deberían.
+   Este archivo tiene 4 bugs. La página debería verse como
+   referencia.svg:
+   - los nombres de los productos en gris oscuro,
+   - el producto destacado con una franja marrón a la izquierda,
+   - la etiqueta OFERTA como una pastilla roja,
+   - el precio en oferta en rojo y tachado.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html en el navegador y comparalo con referencia.svg.
+   2. Inspeccioná con las DevTools (F12): en el panel Styles vas a
+      ver qué reglas GANAN y cuáles quedan tachadas. Ahí está la
+      pista de la cascada y la especificidad.
+   3. Arreglá de a un bug por vez y volvé a comparar.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: secciones 3 y 15 de ../teoria.md.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f1ec;
+  color: #2b2b2b;
+  padding: 24px;
+}
+
+.cabecera {
+  max-width: 640px;
+  margin: 0 auto 16px;
+}
+
+.titulo {
+  color: #b25b1f;
+  font-size: 1.75rem;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.nav-link {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+
+.lista {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.destacado {
+  border-left: 6px solid #b25b1f;
+}
+
+.item {
+  background-color: #ffffff;
+  border: 1px solid #e0d8cc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.nombre {
+  font-size: 1.15rem;
+}
+
+.precio {
+  color: #2a9d8f !important;
+  font-weight: bold;
+}
+
+.etiqueta,
+2026-ofertas {
+  display: inline-block;
+  background-color: #e63946;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.lista :not(.oferta) {
+  color: #2a9d8f;
+}
+
+.oferta .precio {
+  color: #e63946;
+  text-decoration: line-through;
+}
+
+.aviso {
+  max-width: 640px;
+  margin: 16px auto 0;
+  background-color: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 8px;
+  padding: 12px;
+  color: #7a5b00;
+}

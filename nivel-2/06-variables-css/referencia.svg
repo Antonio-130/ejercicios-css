@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" role="img" aria-label="Referencia visual: hero verde, tres tarjetas con padding y precios naranjas, pie redondeado">
+  <rect width="800" height="430" fill="#f4f7f2" />
+
+  <!-- Hero -->
+  <rect x="0" y="0" width="800" height="112" fill="#2f6b3a" />
+  <text x="400" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Vivero El Roble</text>
+  <text x="400" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#d7e6d2">Plantas de interior y de exterior</text>
+
+  <!-- Tarjetas -->
+  <g font-family="system-ui, sans-serif">
+    <rect x="54" y="140" width="220" height="150" rx="10" fill="#ffffff" stroke="#dbe5d8" />
+    <text x="74" y="182" font-size="18" font-weight="bold" fill="#22301f">Monstera</text>
+    <text x="74" y="210" font-size="14" fill="#6f7d6a">Interior, media sombra</text>
+    <text x="74" y="258" font-size="18" font-weight="bold" fill="#e08e08">$8.500</text>
+
+    <rect x="290" y="140" width="220" height="150" rx="10" fill="#ffffff" stroke="#e08e08" stroke-width="2" />
+    <text x="310" y="182" font-size="18" font-weight="bold" fill="#22301f">Helecho</text>
+    <text x="310" y="210" font-size="14" fill="#6f7d6a">Interior, sombra</text>
+    <text x="310" y="258" font-size="18" font-weight="bold" fill="#e08e08">$5.200</text>
+
+    <rect x="526" y="140" width="220" height="150" rx="10" fill="#ffffff" stroke="#dbe5d8" />
+    <text x="546" y="182" font-size="18" font-weight="bold" fill="#22301f">Olivo</text>
+    <text x="546" y="210" font-size="14" fill="#6f7d6a">Exterior, sol pleno</text>
+    <text x="546" y="258" font-size="18" font-weight="bold" fill="#e08e08">$12.000</text>
+  </g>
+
+  <!-- Pie -->
+  <rect x="80" y="320" width="640" height="76" rx="10" fill="#2f6b3a" />
+  <text x="400" y="352" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff">Av. Verde 742 — Vivero El Roble</text>
+  <text x="400" y="376" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#cfe0cb">Abierto de martes a domingo</text>
+</svg>

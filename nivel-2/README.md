@@ -29,8 +29,15 @@ La consigna está al principio de `styles.css` y te dice **qué debería pasar**
 | # | Carpeta | Qué se practica | Bugs |
 |---|---------|-----------------|------|
 | 1 | `01-caja-y-unidades/` | `box-sizing`, `padding`, `width`/`max-width`, centrado, unidades (`px`, `vw`, `rem`) | 4 |
+| 2 | `02-cascada-y-especificidad/` | cascada, especificidad, `:is()`, `:not()`, `!important` | 4 |
+| 3 | `03-flexbox/` | contenedor e ítems flex, ejes, `flex-wrap` | 4 |
+| 4 | `04-posicionamiento/` | `relative`, `absolute`, `fixed`, `z-index` | 4 |
+| 5 | `05-responsive/` | media queries: `min`/`max`, ancho/alto | 4 |
+| 6 | `06-variables-css/` | `var()`, alcance, unidades | 4 |
+| 7 | `07-funciones-y-selectores/` | `calc()`, `clamp()`, `aspect-ratio`, `:has()` | 4 |
+| 8 | `08-integrador/` | todo lo anterior mezclado | 8 |
 
-Los demás se van sumando de a poco, con dificultad creciente.
+Hacelos en orden: cada ejercicio suma temas y el último los mezcla todos.
 
 ## Estrategia sugerida
 

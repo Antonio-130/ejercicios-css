@@ -1,0 +1,113 @@
+/* ============================================================
+   GIMNASIO PULSO — NIVEL 2, EJERCICIO 3
+   Tema: Flexbox
+   ============================================================
+   La página del gimnasio se armó con Flexbox, pero quedó todo
+   desacomodado. Este archivo tiene 4 bugs. La página debería
+   verse como referencia.svg:
+   - la barra con el logo a la izquierda y los links a la
+     derecha, separados;
+   - las 4 tarjetas en fila, con su contenido uno debajo del
+     otro y centrado;
+   - las tarjetas que bajan a la fila siguiente cuando no entran;
+   - el pie con sus datos repartidos.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html y comparalo con referencia.svg.
+   2. En las DevTools (F12) mirá el panel Elements: al pasar el
+      mouse por un contenedor se resalta su caja y se ve si es
+      flex o block. Ahí vas a notar qué contenedor no es flex.
+   3. Achicá la ventana para probar el comportamiento de las
+      tarjetas.
+   4. Arreglá de a un bug por vez.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: sección 9 de ../teoria.md.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #eef2f5;
+  color: #1f2933;
+}
+
+.barra {
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #0f3d3e;
+  color: #ffffff;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.links {
+  gap: 16px;
+}
+
+.links a {
+  color: #9ad1c9;
+  text-decoration: none;
+}
+
+.titulo {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.clases {
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.clase {
+  display: flex;
+  align-items: center;
+  flex: 1 1 200px;
+  background-color: #ffffff;
+  border: 1px solid #d7dee3;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Colores de los íconos: ya están bien, no los toques. */
+.icono {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.clase:nth-child(1) .icono { background-color: #0f3d3e; }
+.clase:nth-child(2) .icono { background-color: #e07a5f; }
+.clase:nth-child(3) .icono { background-color: #3d7ea6; }
+.clase:nth-child(4) .icono { background-color: #8e6c88; }
+
+.clase h2 {
+  font-size: 1.15rem;
+}
+
+.clase p {
+  color: #64748b;
+}
+
+.pie {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 24px;
+  background-color: #0f3d3e;
+  color: #cbd5d1;
+}

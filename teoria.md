@@ -350,6 +350,22 @@ div {
 }
 ```
 
+**Relación de aspecto con `aspect-ratio`:**
+
+Permite fijar la proporción entre ancho y alto; la altura se calcula sola.
+
+```css
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* ancho / alto */
+}
+
+.avatar {
+  width: 80px;
+  aspect-ratio: 1; /* cuadrado perfecto */
+}
+```
+
 ### 4.7 Propiedades de Background
 
 **Propiedades individuales:**
@@ -713,7 +729,98 @@ div {
 }
 ```
 
-### 📚 Enlaces a Documentación Oficial
+### 13. Variables CSS (Custom Properties)
+
+Las variables CSS permiten guardar un valor con un nombre y reutilizarlo. Se definen empezando con `--` y se usan con la función `var()`.
+
+```css
+:root {
+  --color-primario: #2a9d8f;
+  --espacio: 16px;
+}
+
+.boton {
+  background-color: var(--color-primario);
+  padding: var(--espacio);
+}
+```
+
+**Ámbito (scope):** una variable existe en el elemento donde se define y en todos sus descendientes. Definirlas en `:root` (el elemento `<html>`) las hace globales.
+
+**Valor de respaldo (fallback):** si la variable no está definida, se puede indicar un valor por defecto separándolo con una coma:
+
+```css
+color: var(--color-texto, #222);
+```
+
+**Ventaja:** cambiar el valor en un solo lugar actualiza todo el sitio. Es la base de los temas (claro / oscuro).
+
+### 14. Funciones CSS
+
+**`calc()`** permite hacer cuentas mezclando unidades. Los operadores `+` y `-` necesitan espacios alrededor.
+
+```css
+.ancho-completo {
+  width: calc(100% - 40px);
+}
+```
+
+**`min()` y `max()`** eligen el menor o el mayor de sus argumentos:
+
+```css
+.caja {
+  width: min(100%, 600px); /* nunca más de 600px */
+  font-size: max(16px, 1.2vw); /* nunca menos de 16px */
+}
+```
+
+**`clamp(minimo, ideal, maximo)`** deja que un valor se adapte, pero acotado entre un mínimo y un máximo:
+
+```css
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+```
+
+El orden de los argumentos importa: mínimo, preferido, máximo.
+
+### 15. Selectores Modernos
+
+**`:is()`** agrupa selectores y es tolerante: si uno de ellos es inválido, no rompe toda la regla.
+
+```css
+:is(h1, h2, h3) {
+  line-height: 1.2;
+}
+```
+
+**`:where()`** es igual a `:is()`, pero con especificidad cero (no "pesa" en la cascada).
+
+```css
+:where(.lista) {
+  margin-bottom: 8px;
+}
+```
+
+**`:not()`** selecciona los elementos que NO coinciden con lo que está entre paréntesis.
+
+```css
+.item:not(.oferta) {
+  opacity: 0.8;
+}
+```
+
+**`:has()`** selecciona un elemento según lo que contiene (el "selector de padre").
+
+```css
+.tarjeta:has(.etiqueta) {
+  border: 2px solid gold;
+}
+```
+
+**Importante:** una lista de selectores normal (`a, .b, .c`) se cae entera si uno de sus selectores es inválido. `:is()` y `:where()` evitan ese problema.
+
+### Enlaces a Documentación Oficial
 
 [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/CSS) Todo sobre CSS
 

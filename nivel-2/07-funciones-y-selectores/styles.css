@@ -1,0 +1,119 @@
+/* ============================================================
+   ESTUDIO YOGA SERENO — NIVEL 2, EJERCICIO 7
+   Tema: funciones CSS (calc, clamp) y selectores modernos
+   ============================================================
+   El estudio usó funciones y selectores modernos para armar la
+   página, pero varias cosas no funcionan. Este archivo tiene 4
+   bugs. La página debería verse como referencia.svg:
+   - el título con un tamaño que se adapta pero no se sale de rango;
+   - las 3 clases en fila, cada recuadro con forma de video (16:9);
+   - los 3 planes en fila, y SOLO el del medio (el de la promo)
+     con borde rojo.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html y comparalo con referencia.svg.
+   2. En DevTools, una propiedad escrita mal aparece tachada o con
+      un triángulo de advertencia. Ese es el mejor punto de partida.
+   3. Para `:has()`: probá en la consola `document.querySelectorAll(".plan:has(.etiqueta)")`
+      para ver cuántos elementos matchean.
+   4. Arreglá de a un bug por vez.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: secciones 14 y 15 de ../teoria.md.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f7f4ef;
+  color: #2b2b2b;
+}
+
+.encabezado {
+  text-align: center;
+  padding: 48px 24px 24px;
+}
+
+.titulo {
+  font-size: clamp(3rem, 4vw, 1.75rem);
+}
+
+.bajada {
+  color: #7a6f63;
+}
+
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video {
+  width: calc(33.333%-14px);
+  min-width: 240px;
+  margin: 0;
+}
+
+.pantalla {
+  aspect-ratio: 16:9;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.video:nth-child(1) .pantalla { background: linear-gradient(135deg, #3a7d5d, #8fbf9f); }
+.video:nth-child(2) .pantalla { background: linear-gradient(135deg, #7a5c3e, #c9a877); }
+.video:nth-child(3) .pantalla { background: linear-gradient(135deg, #6b5b8e, #b6a6d6); }
+
+figcaption {
+  font-size: 0.85rem;
+  color: #5c5348;
+}
+
+.planes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.plan {
+  flex: 1 1 220px;
+  background-color: #ffffff;
+  border: 1px solid #e6ded2;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.precio {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  color: #3a7d5d;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: #c0392b;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.plan:has(.precio) {
+  border: 2px solid #c0392b;
+}

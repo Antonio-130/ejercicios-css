@@ -1,0 +1,124 @@
+/* ============================================================
+   CINE LUNAR — NIVEL 2, EJERCICIO 4
+   Tema: posicionamiento
+   ============================================================
+   La cartelera del cine quedó desacomodada: hay cosas que se
+   van a la esquina de la pantalla y cosas que deberían quedar
+   fijas y no lo están. Este archivo tiene 4 bugs. La página
+   debería verse como referencia.svg:
+   - la barra oscura pegada arriba, ocupando todo el ancho y
+     por encima del contenido al scrollear;
+   - el sello ESTRENO apoyado sobre el póster;
+   - el botón "Comprar entradas" flotando abajo a la derecha;
+   - el título sin quedar tapado por la barra.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html y comparalo con referencia.svg.
+   2. Scrolleá y achicá la ventana: varios bugs se notan al moverse.
+   3. En DevTools, la solapa Computed del elemento te dice su
+     `position` real y respecto de qué se ubica.
+   4. Arreglá de a un bug por vez.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: sección 7 de ../teoria.md.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 24px;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.funcion {
+  font-size: 0.9rem;
+  color: #fbbf24;
+}
+
+.cartelera {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.pelicula {
+  width: 260px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.sello {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background-color: #fbbf24;
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.poster {
+  height: 140px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.pelicula:nth-child(1) .poster { background: linear-gradient(135deg, #1e3a8a, #7c3aed); }
+.pelicula:nth-child(2) .poster { background: linear-gradient(135deg, #7f1d1d, #111827); }
+.pelicula:nth-child(3) .poster { background: linear-gradient(135deg, #065f46, #0ea5e9); }
+
+.pelicula h2 {
+  font-size: 1.1rem;
+}
+
+.pelicula p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.comprar {
+  background-color: #fbbf24;
+  color: #111827;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+}

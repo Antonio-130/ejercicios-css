@@ -1,0 +1,146 @@
+/* ============================================================
+   HELADERÍA COPOS — NIVEL 2, EJERCICIO 5
+   Tema: diseño responsivo (media queries)
+   ============================================================
+   La heladería quiere una página que se vea bien en la compu
+   y en el celular. Este archivo tiene 4 bugs. La página debería
+   verse como referencia.svg en escritorio, y acomodarse así al
+   achicar la ventana:
+   - hasta 900px: las tarjetas de a 2 por fila;
+   - hasta 600px: las tarjetas de a 1, la barra en columna y el
+     hero más compacto.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html y comparalo con referencia.svg.
+   2. Abrí las DevTools (F12) y activá la vista de dispositivo
+      (Ctrl+Shift+M) para probar distintos anchos, o arrastrá el
+      borde de la ventana.
+   3. Ojo con el eje: no es lo mismo max-width que max-height, ni
+      min-width que max-width.
+   4. Arreglá de a un bug por vez.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: sección 11 de ../teoria.md.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fdf6f0;
+  color: #3d2b1f;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #d62828;
+  color: #ffffff;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  color: #ffd166;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #d62828, #f77f00);
+  color: #ffffff;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.contenedor {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.titulo {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.gustos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.gusto {
+  flex: 0 0 220px;
+  background-color: #ffffff;
+  border: 1px solid #f0dccb;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.muestra {
+  height: 70px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.gusto:nth-child(1) .muestra { background: linear-gradient(135deg, #b45309, #f59e0b); }
+.gusto:nth-child(2) .muestra { background: linear-gradient(135deg, #4a2c17, #8b5e34); }
+.gusto:nth-child(3) .muestra { background: linear-gradient(135deg, #db2777, #f9a8d4); }
+.gusto:nth-child(4) .muestra { background: linear-gradient(135deg, #ca8a04, #fde047); }
+
+.gusto h3 {
+  font-size: 1rem;
+}
+
+.gusto p {
+  color: #8a6f5c;
+}
+
+@media (min-width: 900px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .gusto {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-height: 600px) {
+  .barra {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 32px 16px;
+  }
+
+  .gusto {
+    flex: 1 1 100%;
+  }
+}

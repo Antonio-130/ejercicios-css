@@ -1,0 +1,105 @@
+/* ============================================================
+   VIVERO EL ROBLE — NIVEL 2, EJERCICIO 6
+   Tema: variables CSS (custom properties)
+   ============================================================
+   El vivero armó su tienda con variables CSS para mantener los
+   colores y las medidas en un solo lugar. Pero algunas cosas
+   no toman el estilo. Este archivo tiene 4 bugs. La página
+   debería verse como referencia.svg:
+   - el hero y el pie verdes, con su texto bien separado de los
+     bordes (padding);
+   - las tarjetas con espacio interno y entre ellas;
+   - los precios en naranja y la tarjeta destacada con borde naranja;
+   - los detalles (interior/exterior) en un gris verdoso suave;
+   - el pie con las esquinas redondeadas.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html y comparalo con referencia.svg.
+   2. En DevTools (F12), en la solapa Computed, buscá las
+      propiedades que no se aplican. Si una variable no está
+      definida, `var(...)` no resuelve y la propiedad se ignora.
+   3. Revisá DÓNDE está definida cada variable: una variable solo
+      existe en el elemento donde se declara y en sus hijos.
+   4. Arreglá de a un bug por vez.
+
+   Reglas: solo editás styles.css. No toques el HTML.
+   Teoría: sección 13 de ../teoria.md.
+   ============================================================ */
+
+:root {
+  --color-primario: #2f6b3a;
+  --color-fondo: #f4f7f2;
+  --color-texto: #22301f;
+  --color-texto-suave: #6f7d6a;
+  --espacio: 16;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.hero {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px var(--espacio);
+}
+
+.hero p {
+  opacity: 0.85;
+}
+
+.catalogo {
+  --radio: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio);
+  padding: var(--espacio) 24px;
+}
+
+.tarjeta {
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #dbe5d8;
+  border-radius: var(--radio);
+  padding: var(--espacio);
+}
+
+.tarjeta h2 {
+  font-size: 1.15rem;
+}
+
+.detalle {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.precio {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.destacada {
+  border: 2px solid var(--color-acento);
+}
+
+.pie {
+  max-width: 640px;
+  margin: 24px auto 0;
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  border-radius: var(--radio);
+  padding: var(--espacio);
+}

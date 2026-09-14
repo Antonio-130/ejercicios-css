@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" role="img" aria-label="Referencia visual: portal de noticias con barra azul, nota destacada con cinta, tres notas en fila y pie">
+  <rect width="900" height="620" fill="#f1f5f9" />
+
+  <!-- Barra -->
+  <rect x="0" y="0" width="900" height="56" fill="#1e3a8a" />
+  <text x="24" y="36" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">El Cable</text>
+  <text x="660" y="36" font-family="system-ui, sans-serif" font-size="14" fill="#bfdbfe">Política</text>
+  <text x="740" y="36" font-family="system-ui, sans-serif" font-size="14" fill="#bfdbfe">Deportes</text>
+  <text x="826" y="36" font-family="system-ui, sans-serif" font-size="14" fill="#bfdbfe">Cultura</text>
+
+  <!-- Destacada -->
+  <rect x="24" y="88" width="852" height="254" rx="12" fill="#ffffff" stroke="#e2e8f0" />
+  <rect x="44" y="108" width="380" height="214" rx="8" fill="#38bdf8" />
+  <text x="448" y="176" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#1f2933">Se inauguró el nuevo</text>
+  <text x="448" y="208" font-family="system-ui, sans-serif" font-size="26" font-weight="bold" fill="#1f2933">paseo costero</text>
+  <text x="448" y="242" font-family="system-ui, sans-serif" font-size="15" fill="#64748b">La obra conecta el puerto con</text>
+  <text x="448" y="264" font-family="system-ui, sans-serif" font-size="15" fill="#64748b">la reserva natural.</text>
+  <rect x="44" y="76" width="150" height="24" rx="12" fill="#dc2626" />
+  <text x="119" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">ÚLTIMO MOMENTO</text>
+
+  <!-- Notas -->
+  <g font-family="system-ui, sans-serif">
+    <rect x="29" y="366" width="270" height="170" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="45" y="382" width="238" height="90" rx="8" fill="#6ee7b7" />
+    <text x="45" y="504" font-size="16" font-weight="bold" fill="#1f2933">Arranca el torneo local</text>
+    <text x="45" y="526" font-size="13" fill="#64748b">Deportes — hace 2 h</text>
+
+    <rect x="315" y="366" width="270" height="170" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="331" y="382" width="238" height="90" rx="8" fill="#fcd34d" />
+    <text x="331" y="504" font-size="16" font-weight="bold" fill="#1f2933">Nueva muestra en el museo</text>
+    <text x="331" y="526" font-size="13" fill="#64748b">Cultura — hace 4 h</text>
+
+    <rect x="601" y="366" width="270" height="170" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="617" y="382" width="238" height="90" rx="8" fill="#c4b5fd" />
+    <text x="617" y="504" font-size="16" font-weight="bold" fill="#1f2933">Cambios en el transporte</text>
+    <text x="617" y="526" font-size="13" fill="#64748b">Política — hace 5 h</text>
+  </g>
+
+  <!-- Pie -->
+  <rect x="0" y="560" width="900" height="48" fill="#1e3a8a" />
+  <text x="450" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff">El Cable — 25 años informando</text>
+</svg>
