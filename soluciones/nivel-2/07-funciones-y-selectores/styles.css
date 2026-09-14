@@ -1,0 +1,103 @@
+/* ============================================================
+   CLAVE DEL DOCENTE — NO PUBLICAR
+   Estudio Yoga Sereno — Nivel 2, ejercicio 7
+   Versión correcta. Los 4 bugs y su arreglo:
+   1. clamp(3rem, 4vw, 1.75rem)  -> clamp(1.75rem, 4vw, 3rem)
+   2. calc(33.333%-14px)         -> calc(33.333% - 14px)
+   3. aspect-ratio: 16:9         -> aspect-ratio: 16 / 9
+   4. .plan:has(.precio)         -> .plan:has(.etiqueta)
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f7f4ef;
+  color: #2b2b2b;
+}
+
+.encabezado {
+  text-align: center;
+  padding: 48px 24px 24px;
+}
+
+.titulo {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
+.bajada {
+  color: #7a6f63;
+}
+
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video {
+  width: calc(33.333% - 14px);
+  min-width: 240px;
+  margin: 0;
+}
+
+.pantalla {
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.video:nth-child(1) .pantalla { background: linear-gradient(135deg, #3a7d5d, #8fbf9f); }
+.video:nth-child(2) .pantalla { background: linear-gradient(135deg, #7a5c3e, #c9a877); }
+.video:nth-child(3) .pantalla { background: linear-gradient(135deg, #6b5b8e, #b6a6d6); }
+
+figcaption {
+  font-size: 0.85rem;
+  color: #5c5348;
+}
+
+.planes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.plan {
+  flex: 1 1 220px;
+  background-color: #ffffff;
+  border: 1px solid #e6ded2;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.precio {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  color: #3a7d5d;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: #c0392b;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.plan:has(.etiqueta) {
+  border: 2px solid #c0392b;
+}

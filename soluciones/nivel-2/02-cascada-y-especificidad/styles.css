@@ -1,0 +1,101 @@
+/* ============================================================
+   CLAVE DEL DOCENTE — NO PUBLICAR
+   Ferretería El Tornillo — Nivel 2, ejercicio 2
+   Versión correcta. Los 4 bugs y su arreglo:
+   1. Selector inválido "2026-ofertas" en la lista agrupada
+      -> se borra (o se usa :is(), que es tolerante)
+   2. .lista :not(.oferta) demasiado amplio
+      -> .item:not(.oferta) .precio
+   3. .item definido después de .destacado (misma especificidad)
+      -> .destacado va después de .item
+   4. color: ... !important en .precio
+      -> se quita el !important
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f1ec;
+  color: #2b2b2b;
+  padding: 24px;
+}
+
+.cabecera {
+  max-width: 640px;
+  margin: 0 auto 16px;
+}
+
+.titulo {
+  color: #b25b1f;
+  font-size: 1.75rem;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.nav-link {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+
+.lista {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.item {
+  background-color: #ffffff;
+  border: 1px solid #e0d8cc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.destacado {
+  border-left: 6px solid #b25b1f;
+}
+
+.nombre {
+  font-size: 1.15rem;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+.item:not(.oferta) .precio {
+  color: #2a9d8f;
+}
+
+.oferta .precio {
+  color: #e63946;
+  text-decoration: line-through;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: #e63946;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.aviso {
+  max-width: 640px;
+  margin: 16px auto 0;
+  background-color: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 8px;
+  padding: 12px;
+  color: #7a5b00;
+}

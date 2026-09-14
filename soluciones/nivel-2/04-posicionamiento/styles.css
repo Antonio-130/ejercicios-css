@@ -1,0 +1,117 @@
+/* ============================================================
+   CLAVE DEL DOCENTE — NO PUBLICAR
+   Cine Lunar — Nivel 2, ejercicio 4 (posicionamiento)
+   Versión correcta. Los 4 bugs y su arreglo:
+   1. .pelicula sin position: relative       -> position: relative
+   2. .barra sin position: fixed (+ top/left/width/z-index)
+   3. .cartelera sin padding-top             -> padding-top que compense la barra
+   4. .comprar sin position: fixed (+ offsets)
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 24px;
+}
+
+.barra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.funcion {
+  font-size: 0.9rem;
+  color: #fbbf24;
+}
+
+.cartelera {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 96px 24px 80px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.pelicula {
+  position: relative;
+  width: 260px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.sello {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background-color: #fbbf24;
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.poster {
+  height: 140px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.pelicula:nth-child(1) .poster { background: linear-gradient(135deg, #1e3a8a, #7c3aed); }
+.pelicula:nth-child(2) .poster { background: linear-gradient(135deg, #7f1d1d, #111827); }
+.pelicula:nth-child(3) .poster { background: linear-gradient(135deg, #065f46, #0ea5e9); }
+
+.pelicula h2 {
+  font-size: 1.1rem;
+}
+
+.pelicula p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.comprar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10;
+  background-color: #fbbf24;
+  color: #111827;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+}

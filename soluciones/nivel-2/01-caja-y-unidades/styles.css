@@ -1,0 +1,83 @@
+/* ============================================================
+   CLAVE DEL DOCENTE — NO PUBLICAR
+   Panadería La Espiga — Nivel 2, ejercicio 1 (caja y unidades)
+   Versión correcta del styles.css. Los 4 bugs y su arreglo:
+   1. box-sizing: content-box  ->  border-box
+   2. .panaderia sin centrar   ->  margin: 0 auto
+   3. .logo font-size: 4vw     ->  1.5rem
+   4. .etiqueta width: 70px    ->  sin width (que crezca con el texto)
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #faf4ec;
+  color: #2b2118;
+  padding: 24px;
+}
+
+.panaderia {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cabecera {
+  background-color: #7c4a21;
+  color: #fff8f0;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.horario {
+  font-size: 0.9rem;
+}
+
+.productos {
+  padding: 1rem 0;
+}
+
+.producto {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e5d5c5;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.producto h2 {
+  font-size: 1.5rem;
+}
+
+.precio {
+  color: #7c4a21;
+  font-weight: bold;
+}
+
+.etiqueta {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background-color: #e8a33d;
+  color: #3b2a12;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pie {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7a6a5a;
+  padding-top: 1rem;
+}

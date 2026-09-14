@@ -1,0 +1,86 @@
+/* ============================================================
+   CLAVE DEL DOCENTE — NO PUBLICAR
+   Vivero El Roble — Nivel 2, ejercicio 6 (variables CSS)
+   Versión correcta. Los 4 bugs y su arreglo:
+   1. --color-acento usada pero no definida   -> definirla en :root
+   2. --radio definida dentro de .catalogo    -> moverla a :root
+   3. var(--texto-suave) con nombre equivocado -> var(--color-texto-suave)
+   4. --espacio: 16 (sin unidad)               -> --espacio: 16px
+   ============================================================ */
+
+:root {
+  --color-primario: #2f6b3a;
+  --color-acento: #e08e08;
+  --color-fondo: #f4f7f2;
+  --color-texto: #22301f;
+  --color-texto-suave: #6f7d6a;
+  --radio: 10px;
+  --espacio: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.hero {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px var(--espacio);
+}
+
+.hero p {
+  opacity: 0.85;
+}
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio);
+  padding: var(--espacio) 24px;
+}
+
+.tarjeta {
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #dbe5d8;
+  border-radius: var(--radio);
+  padding: var(--espacio);
+}
+
+.tarjeta h2 {
+  font-size: 1.15rem;
+}
+
+.detalle {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+.precio {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.destacada {
+  border: 2px solid var(--color-acento);
+}
+
+.pie {
+  max-width: 640px;
+  margin: 24px auto 0;
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  border-radius: var(--radio);
+  padding: var(--espacio);
+}
