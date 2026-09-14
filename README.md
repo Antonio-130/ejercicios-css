@@ -54,4 +54,4 @@ En [`nivel-2/`](./nivel-2/) no hay TODOs ni valores para copiar: cada ejercicio 
 -  No modifiques la estructura del HTML ni los nombres de clase
 -  No uses librerías de estilos (Tailwind, Bootstrap, etc.) — solo CSS puro
 
-Teoría de referencia: `teoria.md`. Cualquier duda, consultá con el docente.
+Teoría de referencia: `teoria.md` (copia de los apuntes del repo de la materia). Cualquier duda, consultá con el docente.

@@ -1,3 +1,5 @@
+> Copia de `02-css/README.md` del repo **UTN-programacion3**, que es la única fuente de verdad. No edites este archivo: cualquier cambio se hace en el repo de la UTN y se vuelve a copiar acá.
+
 ## Apuntes de CSS
 
 ### 1. Definición
@@ -820,7 +822,7 @@ El orden de los argumentos importa: mínimo, preferido, máximo.
 
 **Importante:** una lista de selectores normal (`a, .b, .c`) se cae entera si uno de sus selectores es inválido. `:is()` y `:where()` evitan ese problema.
 
-### Enlaces a Documentación Oficial
+### 📚 Enlaces a Documentación Oficial
 
 [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/CSS) Todo sobre CSS
 
