@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688 490" width="688" height="490" role="img" aria-label="Referencia visual: página de precios centrada, encabezado y tarjetas del mismo ancho">
+  <rect width="688" height="490" fill="#faf4ec" />
+  <text x="344" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#8a7a6a">Referencia — la página debería verse así (wireframe, no es pixel-perfect)</text>
+
+  <!-- Encabezado (mismo ancho que las tarjetas) -->
+  <rect x="24" y="40" width="640" height="80" rx="12" fill="#7c4a21" />
+  <text x="64" y="78" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#fff8f0">Panadería La Espiga</text>
+  <text x="64" y="100" font-family="system-ui, sans-serif" font-size="14" fill="#f2ddc9">Abierto de 7 a 20 h</text>
+
+  <!-- Tarjeta 1 con etiqueta -->
+  <rect x="24" y="136" width="640" height="88" rx="8" fill="#ffffff" stroke="#e5d5c5" />
+  <rect x="537" y="126" width="115" height="24" rx="12" fill="#e8a33d" />
+  <text x="594" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#3b2a12">Recién horneado</text>
+  <text x="44" y="178" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2b2118">Pan de campo</text>
+  <text x="44" y="206" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c4a21">$2.400</text>
+
+  <!-- Tarjeta 2 -->
+  <rect x="24" y="240" width="640" height="88" rx="8" fill="#ffffff" stroke="#e5d5c5" />
+  <text x="44" y="282" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2b2118">Budín de limón</text>
+  <text x="44" y="310" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c4a21">$3.800</text>
+
+  <!-- Tarjeta 3 -->
+  <rect x="24" y="344" width="640" height="88" rx="8" fill="#ffffff" stroke="#e5d5c5" />
+  <text x="44" y="386" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#2b2118">Facturas x6</text>
+  <text x="44" y="414" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c4a21">$3.200</text>
+
+  <!-- Pie -->
+  <text x="344" y="460" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#7a6a5a">Av. de los Panaderos 123 — Pedidos al 4444-1111</text>
+</svg>

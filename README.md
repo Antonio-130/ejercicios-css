@@ -22,7 +22,7 @@ La consigna está al principio de `styles.css`, como comentario. Las tareas est�
 
 Si no tenés Live Server, también podés hacer doble clic en el `index.html` y abrirlo directo en el navegador.
 
-## Ejercicios disponibles
+## Nivel 1 — 13 ejercicios por tema
 
 | # | Carpeta | Tema | Teoría |
 |---|---------|------|--------|
@@ -41,6 +41,10 @@ Si no tenés Live Server, también podés hacer doble clic en el `index.html` y 
 | 13 | `13-animaciones-transiciones/` | `transition` y `@keyframes` | §12 |
 
 Hacelos en orden: cada uno se apoya en el anterior.
+
+## Nivel 2 — Arreglar CSS roto
+
+En [`nivel-2/`](./nivel-2/) no hay TODOs ni valores para copiar: cada ejercicio es una página **rota a propósito** que hay que diagnosticar y arreglar, comparando contra una referencia visual. Requiere haber hecho los 13 ejercicios de arriba. Empezá por [`nivel-2/README.md`](./nivel-2/README.md).
 
 ## Reglas
 

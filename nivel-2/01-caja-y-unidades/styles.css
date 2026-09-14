@@ -1,0 +1,97 @@
+/* ============================================================
+   PANADERÍA LA ESPIGA — NIVEL 2, EJERCICIO 1
+   Tema: caja y unidades
+   ============================================================
+   La panadería estrenó su página de precios y "se ve rara".
+   Este archivo tiene 4 bugs. La página debería verse como
+   referencia.svg: la columna centrada, el encabezado y las
+   tarjetas del mismo ancho, la etiqueta prolija y el título
+   de la cabecera con un tamaño estable.
+
+   Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
+
+   Cómo trabajar:
+   1. Abrí index.html en el navegador (Live Server o doble clic).
+   2. Compará contra referencia.svg.
+   3. Usá las DevTools (F12) para inspeccionar el tamaño real de
+      las cajas: te muestra width, padding y border de cada una.
+   4. Arreglá de a un bug por vez y volvé a comparar.
+
+   Reglas: solo editás styles.css. No toques el HTML ni uses
+   librerías. No hay una única solución, pero el resultado tiene
+   que parecerse a la referencia.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #faf4ec;
+  color: #2b2118;
+  padding: 24px;
+}
+
+.panaderia {
+  max-width: 640px;
+}
+
+.cabecera {
+  background-color: #7c4a21;
+  color: #fff8f0;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+}
+
+.logo {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.horario {
+  font-size: 0.9rem;
+}
+
+.productos {
+  padding: 1rem 0;
+}
+
+.producto {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e5d5c5;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.producto h2 {
+  font-size: 1.5rem;
+}
+
+.precio {
+  color: #7c4a21;
+  font-weight: bold;
+}
+
+.etiqueta {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  width: 70px;
+  background-color: #e8a33d;
+  color: #3b2a12;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pie {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7a6a5a;
+  padding-top: 1rem;
+}
